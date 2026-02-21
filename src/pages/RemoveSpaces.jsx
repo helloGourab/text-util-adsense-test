@@ -1,3 +1,4 @@
+// src/pages/RemoveSpaces.jsx ~annotator~
 import { useState } from "react";
 import SEO from "../components/SEO";
 

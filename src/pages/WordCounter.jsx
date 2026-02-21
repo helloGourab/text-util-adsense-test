@@ -1,3 +1,4 @@
+// src/pages/WordCounter.jsx ~annotator~
 import { useState } from "react";
 import SEO from "../components/SEO";
 

@@ -1,3 +1,4 @@
+// src/components/SEO.jsx ~annotator~
 import { Helmet } from "react-helmet-async";
 
 const SEO = ({ title, description }) => {

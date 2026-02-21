@@ -1,3 +1,4 @@
+// src/components/Navbar.jsx ~annotator~
 import { NavLink, Link } from "react-router-dom";
 
 const Navbar = ({ links }) => {
