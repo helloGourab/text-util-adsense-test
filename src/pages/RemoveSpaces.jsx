@@ -71,6 +71,57 @@ export default function RemoveSpaces() {
           Clear
         </button>
       </div>
+
+      <div className="mt-12 prose max-w-none border-t pt-8 text-gray-700">
+        <h2 className="text-2xl font-bold mb-4">
+          Why Use a Whitespace Remover?
+        </h2>
+        <p className="mb-4">
+          Manually fixing spacing issues in large documents is a tedious,
+          error-prone task. Whether you are a developer cleaning up code, a
+          student formatting an essay, or a marketer preparing copy for social
+          media, extra spaces can make your content look unprofessional. Our{" "}
+          <strong>Whitespace Remover</strong> tool automates this process,
+          ensuring your text is clean and standardized in seconds.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-2">Common Use Cases</h3>
+        <ul className="list-disc pl-5 mb-6 space-y-2">
+          <li>
+            <strong>PDF to Text Conversion:</strong> Copying text from PDFs
+            often introduces irregular line breaks and triple spaces. This tool
+            fixes that instantly.
+          </li>
+          <li>
+            <strong>Data Cleaning:</strong> Prepare messy CSV or Excel data for
+            database imports by removing hidden tabs and trailing spaces.
+          </li>
+          <li>
+            <strong>Code Formatting:</strong> Quickly strip out unnecessary
+            indentations or "ghost" spaces from snippets before sharing them.
+          </li>
+          <li>
+            <strong>Social Media & SEO:</strong> Ensure your meta descriptions
+            and tweets don't waste character counts on invisible whitespace.
+          </li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mb-2">How It Works</h3>
+        <p className="mb-4">
+          The tool uses a <code>regex</code> (regular expression) pattern to
+          identify any sequence of two or more whitespace characters—including
+          tabs and newlines—and replaces them with a single space. It also
+          "trims" the text, meaning any empty space at the very beginning or the
+          very end of your input is deleted.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-2">Privacy Guaranteed</h3>
+        <p>
+          Your data never leaves your browser. All text processing happens
+          locally on your device using JavaScript, meaning we don't store, view,
+          or transmit your content to any external servers.
+        </p>
+      </div>
     </section>
   );
 }
