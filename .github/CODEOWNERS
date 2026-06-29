@@ -1,0 +1,34 @@
+# ==========================================================================
+# CODEOWNERS for Case Converter / Word Counter Project
+# ==========================================================================
+
+# 1. Catch-All / Default Owner
+# If a file isn't specifically mentioned below, helloGourab owns it by default.
+* @helloGourab
+
+# 2. Config & Setup Files
+# Both accounts need to review changes to core configs or packages.
+package.json @helloGourab @assignment-sets
+package-lock.json @helloGourab @assignment-sets
+vite.config.js @helloGourab
+eslint.config.js @helloGourab
+vercel.json @helloGourab
+
+# 3. Frontend Pages & Logic
+# Let's say assignment-sets handles the text manipulation pages,
+# while helloGourab reviews the core App wiring and components.
+/src/pages/CaseConverter.jsx @assignment-sets
+/src/pages/RemoveSpaces.jsx @assignment-sets
+/src/pages/WordCounter.jsx @assignment-sets
+
+/src/components/Navbar.jsx @helloGourab
+/src/components/SEO.jsx @helloGourab
+/src/App.jsx @helloGourab @assignment-sets
+/src/main.jsx @helloGourab
+
+# 4. Public Assets & Static HTML
+# Static legal pages, icons, and SEO files go to assignment-sets.
+/public/*.html @assignment-sets
+/public/sitemap.xml @assignment-sets
+/public/robots.txt @assignment-sets
+/public/site.webmanifest @helloGourab
