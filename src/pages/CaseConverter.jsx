@@ -1,4 +1,4 @@
-// src/pages/CaseConverter.jsx ~annotator~
+// src/pages/CaseConverter.jsx
 import { useState } from "react";
 import SEO from "../components/SEO";
 
@@ -7,6 +7,7 @@ export default function CaseConverter() {
 
   const handleUpper = () => setText(text.toUpperCase());
   const handleLower = () => setText(text.toLowerCase());
+
   const handleSentence = () => {
     const converted = text
       .toLowerCase()
@@ -14,17 +15,24 @@ export default function CaseConverter() {
     setText(converted);
   };
 
+  const handleCapital = () => {
+    const converted = text
+      .toLowerCase()
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+    setText(converted);
+  };
+
   return (
     <section>
       <SEO
         title="Case Converter"
-        description="Convert text to uppercase, lowercase, or sentence case instantly."
+        description="Convert text to uppercase, lowercase, sentence case, or capital case instantly."
       />
       <h1 className="text-3xl font-bold mb-4">Case Converter Tool</h1>
       <p className="mb-6 text-gray-600">
-        Easily transform your text between UPPERCASE, lowercase, or Sentence
-        case. This utility saves time when fixing text copied from different
-        sources with inconsistent formatting.
+        Easily transform your text between UPPERCASE, lowercase, Sentence case,
+        or Capital Case. This utility saves time when fixing text copied from
+        different sources with inconsistent formatting.
       </p>
 
       <textarea
@@ -51,6 +59,12 @@ export default function CaseConverter() {
           className="bg-slate-700 text-white px-4 py-2 rounded hover:bg-slate-800"
         >
           Sentence case
+        </button>
+        <button
+          onClick={handleCapital}
+          className="bg-slate-700 text-white px-4 py-2 rounded hover:bg-slate-800"
+        >
+          Capital Case
         </button>
         <button
           onClick={() => setText("")}
@@ -89,6 +103,11 @@ export default function CaseConverter() {
             <strong>Sentence Case:</strong> Automatically capitalizes the first
             letter of every sentence and converts the rest to lowercase. This is
             perfect for fixing paragraphs copied from notes or transcripts.
+          </li>
+          <li>
+            <strong>Capital Case:</strong> Capitalizes the first letter of every
+            single word. Excellent for formatting book titles, article
+            headlines, or database table entries.
           </li>
         </ul>
 
